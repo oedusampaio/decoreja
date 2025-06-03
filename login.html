@@ -3,39 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Login</title>
+    <title>Login - DecoreJá</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/global.css">
 </head>
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="portfolio.html">Portfólio</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
-
-    <div class="login-container">
-        <h2>Login</h2>
-        <form id="formLogin">
-            <div class="input-group">
-                <label for="txtUsuario">Usuário</label>
-                <input type="text" id="txtUsuario" name="txtUsuario" placeholder="Digite seu usuário" required>
+    <header class="main-header">
+        <div class="header-content container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/img/decoreJáLogo.png.png" alt="Logo DecoreJá" class="logo"/>
+                </a>
             </div>
-            <div class="input-group">
-                <label for="txtSenha">Senha</label>
-                <input type="password" id="txtSenha" name="txtSenha" placeholder="Digite sua senha" required>
-            </div>
-            <button type="submit">Entrar</button>
-        </form>
-    </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir Menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html#inicio" class="nav-item">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-item">Sobre</a></li>
+                    <li><a href="index.html#portfolio" class="nav-item">Portfólio</a></li>
+                    <li><a href="index.html#servicos" class="nav-item">Serviços</a></li>
+                    <li><a href="index.html#equipe" class="nav-item">Equipe</a></li>
+                    <li><a href="index.html#blog" class="nav-item">Blog</a></li>
+                    <li><a href="index.html#contato" class="nav-item">Contato</a></li>
+                    <li><a href="login.html" class="nav-item login-button">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <p class="cadastro-link">
-        Não tem cadastro? <a href="cadastro.html">Cadastre-se</a>
-    </p>
+    <main class="auth-page-main">
+        <section class="auth-form-section">
+            <div class="login-container container">
+                <h2>Login</h2>
+                <form id="formLogin" class="auth-form">
+                    <div class="input-group">
+                        <label for="txtUsuario">Usuário</label>
+                        <input type="text" id="txtUsuario" name="txtUsuario" placeholder="Digite seu usuário" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="txtSenha">Senha</label>
+                        <input type="password" id="txtSenha" name="txtSenha" placeholder="Digite sua senha" required>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Entrar</button>
+                </form>
+                <p class="auth-link">
+                    Não tem cadastro? <a href="cadastro.html">Cadastre-se</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 DecoreJá. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
     <script src="assets/javascript/site.js" defer></script>
 </body>

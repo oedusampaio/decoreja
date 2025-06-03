@@ -1,40 +1,90 @@
-/* Cadastro */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #E94273;
+    --secondary-color: #272727;
+    --text-light: #FFFFFF;
+    --text-dark: #333333;
+    --bg-white: #FFFFFF;
+    --border-color: #E0E0E0;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 40px;
+
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+}
+
+/* Container do formulário */
 .cadastro-container {
     max-width: 500px;
-    margin: 50px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    padding: var(--spacing-lg);
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--shadow-light);
 }
 
+/* Título */
 .cadastro-container h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
 }
 
-.cadastro-container .input-group {
-    margin-bottom: 15px;
+/* Grupos de entrada */
+.input-group {
+    margin-bottom: var(--spacing-md);
 }
 
-.cadastro-container input {
+.input-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
     width: 100%;
-    padding: 10px;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
-    border: 1px solid #ccc;
+    font-family: var(--font-body);
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cadastro-container button {
+.input-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(233, 66, 115, 0.2);
+    outline: none;
+}
+
+/* Botão de envio */
+.cadastro-container button[type="submit"] {
     width: 100%;
-    padding: 10px;
-    background-color: #0077ff;
-    color: white;
+    padding: var(--spacing-sm);
+    background-color: var(--primary-color);
+    color: var(--text-light);
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.cadastro-container button:hover {
-    background-color: #005bb5;
+.cadastro-container button[type="submit"]:hover {
+    background-color: #d13a65;
+    transform: translateY(-2px);
 }
+

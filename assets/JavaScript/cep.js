@@ -1,4 +1,4 @@
-document.getElementById("cep").addEventListener("input", function () {
+admdocument.getElementById("cep").addEventListener("input", function () {
     let cep = this.value.replace(/\D/g, "");
     
     if (cep.length === 8) {

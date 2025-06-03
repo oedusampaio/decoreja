@@ -1,75 +1,288 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Landing Page - DecoreJá</title>
-    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/global.css" />
 </head>
 <body>
 
-    <div class="logo-container">
-        <img src="assets/img/decoreJáLogo.png.png" alt="Logo DecoreJá">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
+    <header class="main-header">
+        <div class="header-content container">
+            <div class="logo-container">
+                <a href="#inicio">
+                    <img src="assets/img/decoreJáLogo.png.png" alt="Logo DecoreJá" class="logo"/>
+                </a>
+            </div>
 
-    <section id="inicio">
-        <h1>Bem-vindo à DecoreJá</h1>
-        <p>Transformamos ambientes em experiências únicas de conforto e estilo.</p>
-        <a href="#servicos">
-            <button>Solicitar Consultoria</button>
-        </a>
-    </section>
-
-    <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Somos especialistas em decoração e design de interiores. Cada espaço é uma história — a sua merece ser contada com beleza.</p>
-    </section>
-
-    <section id="portfolio">
-        <h2>Nosso Portfólio</h2>
-        <div class="portfolio-grid">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir Menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-item">Início</a></li>
+                    <li><a href="#sobre" class="nav-item">Sobre</a></li>
+                    <li><a href="#portfolio" class="nav-item">Portfólio</a></li>
+                    <li><a href="#servicos" class="nav-item">Serviços</a></li>
+                    <li><a href="#equipe" class="nav-item">Equipe</a></li>
+                    <li><a href="#blog" class="nav-item">Blog</a></li>
+                    <li><a href="#contato" class="nav-item">Contato</a></li>
+                    <li><a href="login.html" class="nav-item login-button">Login</a></li>
+                    <li><a href="adm-login.html" class="nav-item admin-login-button">Login ADM</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <section id="servicos">
-        <h2>Nossos Serviços</h2>
-        <p>Consultorias online e presenciais, projetos personalizados, acompanhamento de obras e muito mais!</p>
-    </section>
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="hero-content container">
+                <h1>Bem-vindo à DecoreJá</h1>
+                <p>Transformamos ambientes em experiências únicas de conforto e estilo.</p>
+                <a href="#servicos" class="btn primary-btn">
+                    Solicitar Consultoria
+                </a>
+            </div>
+        </section>
 
-    <section id="contato">
-        <h2>Fale Conosco</h2>
-        <form class="contact-form">
-            <div class="input-group">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" required>
+        <section id="sobre" class="about-section section-padding">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <div class="about-content">
+                    <p>Somos especialistas em decoração e design de interiores. Cada espaço é uma história — a sua merece ser contada com beleza.</p>
+                    <p>Nossa equipe conta com arquitetos, designers e consultores prontos para transformar o seu sonho em realidade, com soluções personalizadas e sustentáveis.</p>
+                    <p>Atendemos em todo o Brasil, com foco em projetos residenciais, comerciais e corporativos. Acreditamos que cada detalhe importa e buscamos sempre superar expectativas.</p>
+                </div>
             </div>
-            <div class="input-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="input-group">
-                <label for="mensagem">Mensagem</label>
-                <input type="text" id="mensagem" required>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+        </section>
 
-    <footer>
-        <p>© 2025 DecoreJá. Todos os direitos reservados.</p>
+        <section id="portfolio" class="portfolio-section section-padding bg-light-gray">
+            <div class="container">
+                <h2>Nosso Portfólio</h2>
+                <p class="section-description">Conheça alguns dos projetos que marcaram a trajetória da DecoreJá.</p>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <img src="assets/img/projeto-residencial.jpg" alt="Projeto Residencial Moderno" class="portfolio-img"/>
+                        <div class="card-info">
+                            <h3>Projeto Residencial Moderno</h3>
+                            <p>Um lar com linhas limpas e funcionalidade, combinando conforto e elegância.</p>
+                            <a href="#" class="btn secondary-btn small-btn">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <img src="assets/img/25-escritorio-moderno-e-luxuoso.jpg" alt="Design de Escritório Inovador" class="portfolio-img"/>
+                        <div class="card-info">
+                            <h3>Design de Escritório Inovador</h3>
+                            <p>Espaço corporativo que estimula a criatividade e a produtividade.</p>
+                            <a href="#" class="btn secondary-btn small-btn">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <img src="assets/img/clinica.jpg" alt="Clínica Odontológica Acolhedora" class="portfolio-img"/>
+                        <div class="card-info">
+                            <h3>Clínica Odontológica Acolhedora</h3>
+                            <p>Um ambiente que transforma a visita ao dentista em uma experiência tranquila.</p>
+                            <a href="#" class="btn secondary-btn small-btn">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <img src="assets/img/loft.jpg" alt="Loft Urbano Minimalista" class="portfolio-img"/>
+                        <div class="card-info">
+                            <h3>Loft Urbano Minimalista</h3>
+                            <p>Funcionalidade e estilo em um espaço compacto, ideal para a vida na cidade.</p>
+                            <a href="#" class="btn secondary-btn small-btn">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <img src="assets/img/cozinha-gourmet-42-1024x888.jpg" alt="Cozinha Gourmet Integrada" class="portfolio-img"/>
+                        <div class="card-info">
+                            <h3>Cozinha Gourmet Integrada</h3>
+                            <p>Cozinha moderna e espaçosa, perfeita para culinária e socialização.</p>
+                            <a href="#" class="btn secondary-btn small-btn">Ver Projeto</a>
+                        </div>
+                    </div>
+                     <div class="portfolio-card">
+                        <img src="assets/img/sala.jpg" alt="Sala de Estar Aconchegante" class="portfolio-img"/>
+                        <div class="card-info">
+                            <h3>Sala de Estar Aconchegante</h3>
+                            <p>Criação de um ambiente convidativo para relaxamento e convívio familiar.</p>
+                            <a href="#" class="btn secondary-btn small-btn">Ver Projeto</a>
+                        </div>
+                    </div>
+                     <div class="portfolio-card">
+                        <img src="assets/img/quarto.infantil.jpg" alt="Quarto Infantil Temático" class="portfolio-img"/>
+                        <div class="card-info">
+                            <h3>Quarto Infantil Temático</h3>
+                            <p>Espaço lúdico e seguro, projetado para o desenvolvimento e a imaginação.</p>
+                            <a href="#" class="btn secondary-btn small-btn">Ver Projeto</a>
+                        </div>
+                    </div>
+                     <div class="portfolio-card">
+                        <img src="assets/img/banheiro.jpg" alt="Banheiro Moderno e Funcional" class="portfolio-img"/>
+                        <div class="card-info">
+                            <h3>Banheiro Moderno e Funcional</h3>
+                            <p>Um refúgio de bem-estar com design clean e otimização de espaço.</p>
+                            <a href="#" class="btn secondary-btn small-btn">Ver Projeto</a>
+                        </div>
+                    </div>
+                     <div class="portfolio-card">
+                        <img src="assets/img/area_externa_com_piscina_e_espaco_gourmet_4d9b_original.jpg" alt="Área Externa com Piscina" class="portfolio-img"/>
+                        <div class="card-info">
+                            <h3>Área Externa com Piscina</h3>
+                            <p>Projeto de paisagismo e lazer, ideal para momentos de descontração ao ar livre.</p>
+                            <a href="#" class="btn secondary-btn small-btn">Ver Projeto</a>
+                        </div>
+                    </div>
+                     <div class="portfolio-card">
+                        <img src="assets/img/restaurante.jpg" alt="Restaurante com Design Industrial" class="portfolio-img"/>
+                        <div class="card-info">
+                            <h3>Restaurante com Design Industrial</h3>
+                            <p>Ambiente moderno e vibrante que combina estética industrial com conforto.</p>
+                            <a href="#" class="btn secondary-btn small-btn">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="services-section section-padding">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <ul class="services-list">
+                    <li><span class="icon">&#9733;</span> Consultoria de decoração online e presencial</li>
+                    <li><span class="icon">&#9733;</span> Projetos personalizados e sustentáveis</li>
+                    <li><span class="icon">&#9733;</span> Acompanhamento de obras</li>
+                    <li><span class="icon">&#9733;</span> Design de interiores para residências, lojas e escritórios</li>
+                    <li><span class="icon">&#9733;</span> Produção decorativa para eventos e datas comemorativas</li>
+                    <li><span class="icon">&#9733;</span> Planos de assinatura com atualizações sazonais</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="equipe" class="team-section section-padding bg-light-gray">
+            <div class="container">
+                <h2>Nossa Equipe</h2>
+                <p class="section-description">Conheça os profissionais por trás da DecoreJá:</p>
+                <div class="team-grid">
+                    <div class="colaborador">
+                        <img src="assets/img/edu.jpg" alt="Arquiteto Eduardo Sampaio" class="colaborador-img">
+                        <div class="colaborador-info">
+                            <h3>Eduardo Sampaio</h3>
+                            <p>Arquiteto-chefe com 10 anos de experiência em interiores residenciais.</p>
+                        </div>
+                    </div>
+                    <div class="colaborador">
+                        <img src="assets/img/fabio.jpg" alt="Designer Fábio Andrade" class="colaborador-img">
+                        <div class="colaborador-info">
+                            <h3>Fábio Andrade</h3>
+                            <p>Designer de interiores premiado, especialista em espaços comerciais.</p>
+                        </div>
+                    </div>
+                    <div class="colaborador">
+                        <img src="assets/img/juliana.jpg" alt="Consultora Juliana Silva" class="colaborador-img">
+                        <div class="colaborador-info">
+                            <h3>Juliana Silva</h3>
+                            <p>Consultora de estilo e ambientação com foco em ambientes afetivos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog-section section-padding">
+            <div class="container">
+                <h2>Nosso Blog</h2>
+                <p class="section-description">Dicas, tendências e ideias criativas para você se inspirar!</p>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <img src="assets/img/tedencia.jpg" alt="Tendências 2025" class="blog-img"/>
+                        <div class="card-info">
+                            <h3>5 Tendências de Decoração para 2025</h3>
+                            <p>Conheça os estilos, cores e materiais que estarão em alta.</p>
+                            <a href="#" class="read-more">Ler mais &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="assets/img/espacospequenos.jpg" alt="Pequenos espaços" class="blog-img"/>
+                        <div class="card-info">
+                            <h3>Como Decorar Espaços Pequenos</h3>
+                            <p>Dicas práticas para otimizar e embelezar cada canto da sua casa.</p>
+                            <a href="#" class="read-more">Ler mais &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="assets/img/plantas.jpg" alt="Plantas na decoração" class="blog-img"/>
+                        <div class="card-info">
+                            <h3>Plantas na Decoração</h3>
+                            <p>Incorpore natureza nos ambientes e traga mais vida e frescor.</p>
+                            <a href="#" class="read-more">Ler mais &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="testimonials-section section-padding bg-light-gray">
+            <div class="container">
+                <h2>Depoimentos</h2>
+                <p class="section-description">Veja o que nossos clientes dizem:</p>
+                <div class="depoimentos-grid">
+                    <div class="depoimento-card">
+                        <p class="quote">"Fiquei encantada com o resultado! Superaram minhas expectativas."</p>
+                        <strong class="author">— Carla M., São Paulo</strong>
+                    </div>
+                    <div class="depoimento-card">
+                        <p class="quote">"Profissionalismo, bom gosto e atenção aos detalhes. Recomendo demais."</p>
+                        <strong class="author">— João Pedro L., Rio de Janeiro</strong>
+                    </div>
+                    <div class="depoimento-card">
+                        <p class="quote">"Minha sala virou um ambiente dos sonhos. Obrigada DecoreJá!"</p>
+                        <strong class="author">— Fernanda A., Belo Horizonte</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-final" class="cta-section section-padding">
+            <div class="container text-center">
+                <h2>Vamos transformar seu espaço?</h2>
+                <p>Fale com a gente e comece seu projeto agora mesmo!</p>
+                <a href="#contato" class="btn primary-btn">Entrar em contato</a>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section section-padding bg-light-gray">
+            <div class="container">
+                <h2>Fale Conosco</h2>
+                <form class="contact-form">
+                    <div class="input-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 DecoreJá. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="assets/javascript/site.js" defer></script>
